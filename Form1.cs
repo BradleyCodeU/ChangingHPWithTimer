@@ -19,8 +19,8 @@ namespace ChangingHPWithTimer
 
         public static int Roll()
         {
-            // Returns an integer 1 to 6
-            return rnd.Next(1, 6);
+            // Returns an integer between 1 and 6. The upper boundary is exclusive and it will never return 7.
+            return rnd.Next(1, 7);
         }
     }
     public partial class Form1 : Form
@@ -52,18 +52,16 @@ namespace ChangingHPWithTimer
 
             // Stop your timer using the Timer class's Stop method
 
-
-            return 0;
         }
 
-        public void timer1_Tick(object sender, EventArgs e)
+        public void timer1_Run(object sender, EventArgs e)
         {
             // use int.Parse(label2.Text) to get the current health and store it in a new int called playerHealth
 
             // ROLL TWO DICE: use the Dice class's Roll method + another Dice Roll method and store it in a new int called enemyDamage
 
             // Set playerHealth to playerHealth minus enemyDamage
-            playerHealth -= enemyDamage;
+            playerHealth -= EnemyDamage;
 
             // create a MessageBox with a Show method that tells you "Enemy attacks you! -enemyDamage HP"
 
