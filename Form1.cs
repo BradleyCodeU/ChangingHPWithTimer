@@ -12,17 +12,7 @@ using System.Windows.Forms;
 
 namespace ChangingHPWithTimer
 {
-    // Create a Dice class
-    public static class Dice
-    {
-        private static Random rnd = new Random();
 
-        public static int Roll()
-        {
-            // Returns an integer between 1 and 6. The upper boundary is exclusive and it will never return 7.
-            return rnd.Next(1, 7);
-        }
-    }
     public partial class Form1 : Form
     {
         // Declare a static Timer object called myTimer using the new Timer() constructor
@@ -35,7 +25,7 @@ namespace ChangingHPWithTimer
             InitializeComponent();
 
             // Run the timer1_Tick function each time the Interval is up
-            mytimer.Tick += new EventHandler(timer1_Tick);
+            myTimer.Tick += new EventHandler(timer1_Tick);
 
             // Set your timer's Interval property to a random 1-6 seconds using the Dice class's Roll method
 
@@ -54,14 +44,14 @@ namespace ChangingHPWithTimer
 
         }
 
-        public void timer1_Run(object sender, EventArgs e)
+        public void timer1_Tick(object sender, EventArgs e)
         {
             // use int.Parse(label2.Text) to get the current health and store it in a new int called playerHealth
 
             // ROLL TWO DICE: use the Dice class's Roll method + another Dice Roll method and store it in a new int called enemyDamage
 
             // Set playerHealth to playerHealth minus enemyDamage
-            playerHealth -= EnemyDamage;
+            playerHealth -= enemyDamage;
 
             // create a MessageBox with a Show method that tells you "Enemy attacks you! -enemyDamage HP"
 
@@ -71,5 +61,15 @@ namespace ChangingHPWithTimer
 
         }
     }
-}
+    // Create a Dice class
+    public static class Dice
+    {
+        private static Random rnd = new Random();
 
+        public static int Roll()
+        {
+            // Returns an integer between 1 and 6. The upper boundary is exclusive and it will never return 7.
+            return rnd.Next(1, 7);
+        }
+    }
+}
