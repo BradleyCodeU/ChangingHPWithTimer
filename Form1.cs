@@ -15,9 +15,7 @@ namespace ChangingHPWithTimer
 
     public partial class Form1 : Form
     {
-        // Declare a static Timer object called myTimer using the new Timer() constructor
-
-        // Declare a static boolean called exitFlag and set it to false
+        // Declare a Timer object called myTimer using the new Timer() constructor
 
 
         public Form1()
@@ -33,15 +31,8 @@ namespace ChangingHPWithTimer
 
             // Start your timer using the Timer class's Start method
 
-            // Use a while loop to repeat while the exitFlag is false
-
-            {
-                // This code processes all the events in the queue.
-                Application.DoEvents();
-            }
-
-            // Stop your timer using the Timer class's Stop method
-
+            // This code processes all the events in the queue.
+            Application.DoEvents();
         }
 
         public void timer1_Tick(object sender, EventArgs e)
@@ -53,11 +44,18 @@ namespace ChangingHPWithTimer
             // Set playerHealth to playerHealth minus enemyDamage
             playerHealth -= enemyDamage;
 
-            // create a MessageBox with a Show method that tells you "Enemy attacks you! -enemyDamage HP"
-
             // convert playerHealth with the ToString() method and set it as the label2.Text
 
-            // if the playerHealth is less than 1, set the exitFlag to true
+            // create a MessageBox with a Show method that tells you "Enemy attacks you! -enemyDamage HP"
+
+            // if the playerHealth is less than 1
+
+            {
+                // Stop your timer using the Timer class's Stop method
+
+                // create a MessageBox with a Show method that says "YOU DIED"
+
+            }
 
         }
     }
@@ -65,7 +63,6 @@ namespace ChangingHPWithTimer
     public static class Dice
     {
         private static Random rnd = new Random();
-
         public static int Roll()
         {
             // Returns an integer between 1 and 6. The upper boundary is exclusive and it will never return 7.

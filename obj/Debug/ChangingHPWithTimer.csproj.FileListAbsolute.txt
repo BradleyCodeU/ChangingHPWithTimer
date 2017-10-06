@@ -1,2 +1,6 @@
 C:\Users\rileyju\Documents\GitHub\ChangingHPWithTimer\ChangingHPWithTimer\bin\Debug\ChangingHPWithTimer.exe.config
 C:\Users\rileyju\Documents\GitHub\ChangingHPWithTimer\bin\Debug\ChangingHPWithTimer.exe.config
+C:\Users\rileyju\Documents\GitHub\ChangingHPWithTimer\obj\Debug\ChangingHPWithTimer.csprojResolveAssemblyReference.cache
+C:\Users\rileyju\Documents\GitHub\ChangingHPWithTimer\obj\Debug\ChangingHPWithTimer.Form1.resources
+C:\Users\rileyju\Documents\GitHub\ChangingHPWithTimer\obj\Debug\ChangingHPWithTimer.Properties.Resources.resources
+C:\Users\rileyju\Documents\GitHub\ChangingHPWithTimer\obj\Debug\ChangingHPWithTimer.csproj.GenerateResource.Cache
